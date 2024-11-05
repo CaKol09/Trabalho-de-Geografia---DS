@@ -1,0 +1,37 @@
+#feito por: Caio Pessona
+def verificar_seguranca_bairro():
+    print("Bem-vindo ao Verificador de Segurança do Bairro!!")
+
+viaturas = input("Passa viatura com frequência no bairro? (s/n) ")
+iluminacao = input("Em vários locais do bairro tem uma boa iluminação? (s/n) ")
+vandalismos = input("Geralmente ocorre bastante assalto? (s/n) ")
+base_de_seguranca = input("Tem base de segurança no bairro? (s/n) ")
+
+respostas_sim = 0
+respostas_nao = 0
+
+if viaturas.lower() == "s":
+    respostas_sim += 1
+else:
+    respostas_nao += 1
+
+if iluminacao.lower() == "s":
+    respostas_sim += 1
+else:
+    respostas_nao += 1
+
+if vandalismos.lower() == "s":
+    respostas_sim += 1
+else:
+    respostas_nao += 1
+    
+if base_de_seguranca.lower() == "s":
+    respostas_sim += 1
+else:
+    respostas_nao += 1
+limite_seguranca = 3
+
+if respostas_sim >= limite_seguranca:
+    print("Seu bairro é considerado seguro.")
+else:
+    print("Seu bairro não é considerado seguro.")
